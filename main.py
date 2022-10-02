@@ -1,5 +1,6 @@
 # Imports
 from tkinter import Tk, Canvas
+from os import system
 
 # App
 class App(Tk):
@@ -77,6 +78,7 @@ class App(Tk):
             self.canvas.itemconfig(self.resolution_label, text="N/A")
 
 # Getting resolutions in a foolproof way
+system("title TkSize Initialization") # Setting system title
 try:
     width = int(input("Enter width (default is 1200): ").strip())
     if width < 100 or width > 1800:
